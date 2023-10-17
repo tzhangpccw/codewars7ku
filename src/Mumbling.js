@@ -12,13 +12,8 @@ The parameter of accum is a string which includes only letters from a..z and A..
 // import Test from '@codewars/test-compat';
 function accum(s) {
     // your code
-    return s.split('').map((item, idx) => {
-        let res = ''
-        for (let i = 0; i < idx + 1; i++) {
-            res += item.toLowerCase()
-        }
-        return res[0].toUpperCase() + res.slice(1).toLowerCase()
-    })
+    return s.split('').map((item, idx) => item[0].toUpperCase() +
+        item.repeat(idx).toLowerCase())
         .join("-")
 }
 /* describe("accum", function () {

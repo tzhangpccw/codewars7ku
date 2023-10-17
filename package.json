@@ -1,0 +1,19 @@
+{
+  "name": "codewars7ku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aluck-Tiffany/codewars7ku.git"
+  },
+  "author": "Tiffany",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aluck-Tiffany/codewars7ku/issues"
+  },
+  "homepage": "https://github.com/aluck-Tiffany/codewars7ku#readme"
+}

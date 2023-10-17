@@ -16,11 +16,21 @@ Then the new season standings should
 1:'Leeds United' (first last season) 2:'Arsenal' (alphabetical) 3:'Coventry' (alphabetical) 4:'Liverpool' (alphabetical) 5:'Manchester City' (alphabetical)
 */
 function premierLeagueStandings(teamStandings) {
-    let arr= Object.values(teamStandings)
-    const [first,...rest]= arr
-    arr=arr.sort()
-    arr = [first].concat(arr)
-    let retObj={};
-    arr.map((v,i)=>retObj[i+1]=arr[i])
-    return retObj
-  }
+  let arr = Object.values(teamStandings)
+  const [first, ...rest] = arr
+  arr = arr.sort()
+  arr = [first].concat(arr)
+  let retObj = {};
+  arr.map((v, i) => retObj[i + 1] = arr[i])
+  return retObj
+}
+
+/* const Test = require('@codewars/test-compat');
+
+describe("Tests", () => {
+  it("test", () => {
+    Test.assertSimilar(premierLeagueStandings({ 1: 'Arsenal' }), { 1: 'Arsenal' }, 'Should return Arsenal as position 1')
+    Test.assertSimilar(premierLeagueStandings({ 2: 'Arsenal', 3: 'Accrington Stanley', 1: 'Leeds United' }), { 3: 'Arsenal', 2: 'Accrington Stanley', 1: 'Leeds United' }, 'Should return team in position 1 last season as #1 and all other teams in alphabetical order!')
+    Test.assertSimilar(premierLeagueStandings({ 1: 'Leeds United', 2: 'Liverpool', 3: 'Manchester City', 4: 'Coventry', 5: 'Arsenal' }), { 1: 'Leeds United', 2: 'Arsenal', 3: 'Coventry', 4: 'Liverpool', 5: 'Manchester City' }, 'Should return team in position 1 last season as #1 and all other teams in alphabetical order!')
+  });
+}); */

@@ -15,16 +15,17 @@ Then the new season standings should
 
 1:'Leeds United' (first last season) 2:'Arsenal' (alphabetical) 3:'Coventry' (alphabetical) 4:'Liverpool' (alphabetical) 5:'Manchester City' (alphabetical)
 */
+
 function premierLeagueStandings(teamStandings) {
-  let arr = Object.values(teamStandings)
+  // Insert Code here 
+  let arr = Object.values(teamStandings);
   const [first, ...rest] = arr
-  arr = arr.sort()
-  arr = [first].concat(arr)
-  let retObj = {};
-  arr.map((v, i) => retObj[i + 1] = arr[i])
+  const newArr = [first].concat(rest.sort())
+  let retObj = {}
+  newArr.forEach((_, i) => retObj[i + 1] = newArr[i])
   return retObj
 }
-
+module.exports = premierLeagueStandings
 /* const Test = require('@codewars/test-compat');
 
 describe("Tests", () => {

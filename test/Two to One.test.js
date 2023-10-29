@@ -2,7 +2,7 @@ const chai = require('chai')
 const longest = require('../src/Two to One')
 
 
-describe.only("Two to One longest", function () {
+describe("Two to One longest", function () {
     it("Two to One Basic tests", function () {
         chai.assert.deepEqual(longest("aretheyhere", "yestheyarehere"), "aehrsty")
         chai.assert.deepEqual(longest("loopingisfunbutdangerous", "lessdangerousthancoding"), "abcdefghilnoprstu")

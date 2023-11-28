@@ -28,3 +28,17 @@ function sumTriangularNumbers(n) {
     console.log(222, sum)
     return sum
 }
+
+/*
+const Test = require('@codewars/test-compat');
+
+describe("Tests", () => {
+  it("test", () => {
+Test.assertEquals(sumTriangularNumbers(6), 56);
+Test.assertEquals(sumTriangularNumbers(34), 7140);
+Test.assertEquals(sumTriangularNumbers(-291), 0);
+Test.assertEquals(sumTriangularNumbers(943), 140205240);
+Test.assertEquals(sumTriangularNumbers(-971), 0);
+  });
+});
+*/
